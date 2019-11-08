@@ -1,0 +1,34 @@
+a {
+  color: white;
+  text-decoration: none;
+  font-size: calc(12px + 1vmin);
+  font-weight: 600;
+}
+
+.App {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(12px + 1vmin);
+  color: white;
+}
+
+.App-bar {
+  padding: 10px;
+  font-size: calc(20px + 1vmin);
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+.App-main {
+  display: flex;
+  flex-direction: row;
+}
+
+.App-screen {
+  flex: 1;
+}
