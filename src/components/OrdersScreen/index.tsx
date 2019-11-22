@@ -1,11 +1,18 @@
 import React from 'react';
 import names from '../names.json';
-import Order from '../Order/index.js';
-import Button from '../Button/index';
+import Order from '../Order';
+import Button from '../Button';
 import sum from 'lodash/sum';
 import values from 'lodash/values';
 
-function OrdersScreen({ state, dispatch }) {
+interface Props {
+  state: {
+    orders: any[];
+  };
+  dispatch: (action: any) => void;
+}
+
+function OrdersScreen({ state, dispatch }: Props) {
   function randomName() {
     const unusedNames = names.filter(name => !state.orders.map(order => order.name).includes(name));
     return unusedNames[Math.floor(Math.random() * unusedNames.length)];

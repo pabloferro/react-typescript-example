@@ -3,7 +3,16 @@ import { Link } from 'react-router-dom';
 import { MdStar } from 'react-icons/md';
 import { MdStarBorder } from 'react-icons/md';
 
-class Order extends Component {
+interface Props {
+  name: string;
+  empanadasAmount: number;
+}
+
+interface State {
+  starred: boolean;
+}
+
+class Order extends Component<Props, State> {
   state = {
     starred: false
   };

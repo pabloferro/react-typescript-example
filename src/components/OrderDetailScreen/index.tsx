@@ -4,11 +4,22 @@ import sum from 'lodash/sum';
 import values from 'lodash/values';
 
 import EMPANADAS_LIST from '../empanadas.json';
-import Button from '../Button/index';
+import Button from '../Button';
+import { AppState, AppActions } from '../../reducer.js';
 
-function OrderDetailScreen({ state, dispatch }) {
+interface Props {
+  state: AppState
+  dispatch: (action: AppActions) => void;
+}
+
+function OrderDetailScreen({ state, dispatch }: Props) {
   const { name } = useParams();
   const order = state.orders.find(order => order.name === name);
+
+  if (!name || !order) {
+    return <h1>404</h1>;
+  }
+
   return (
     <div>
       <div className="row center middle">
