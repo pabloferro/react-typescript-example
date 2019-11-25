@@ -1,6 +1,6 @@
 import { useReducer } from 'react';
 
-function usePersistentReducer<S, A, I>(reducer: (state: S, action: A) => S, defaultState: I) {
+function usePersistentReducer<S, A>(reducer: (state: S, action: A) => S, defaultState: object) {
   function persistentReducer(state: S, action: A) {
     const newState = reducer(state, action);
 
