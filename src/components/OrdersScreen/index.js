@@ -1,7 +1,7 @@
 import React from 'react';
 import names from '../names.json';
-import Order from '../Order/index.js';
-import Button from '../Button/index';
+import Order from '../Order';
+import Button from '../Button';
 import sum from 'lodash/sum';
 import values from 'lodash/values';
 

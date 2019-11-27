@@ -4,7 +4,7 @@ import sum from 'lodash/sum';
 import values from 'lodash/values';
 
 import EMPANADAS_LIST from '../empanadas.json';
-import Button from '../Button/index';
+import Button from '../Button';
 
 function OrderDetailScreen({ state, dispatch }) {
   const { name } = useParams();
