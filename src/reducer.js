@@ -7,6 +7,18 @@ export const DEFAULT_STATE = {
 
 let id = 1;
 
+// interface Order {
+//   id: number;
+//   name: string;
+//   empanadas: number[];
+// }
+
+// interface AppState {
+// }
+
+// type AppActions =
+
+
 export function reducer(state, action) {
   switch (action.type) {
     case 'ADD_ORDER':
