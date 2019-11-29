@@ -9,6 +9,7 @@ import Button from '../Button';
 function OrderDetailScreen({ state, dispatch }) {
   const { name } = useParams();
   const order = state.orders.find(order => order.name === name);
+
   return (
     <div>
       <div className="row center middle">
@@ -19,9 +20,19 @@ function OrderDetailScreen({ state, dispatch }) {
       </div>
       {EMPANADAS_LIST.map(empanada => (
         <div className="row center middle" key={empanada.id}>
-          <p className="m-right-2" >{order.empanadas[empanada.id] || 0} {empanada.name}</p>
-          <Button onClick={() => dispatch({ type: 'REMOVE_ITEM', name, id: empanada.id })}>-</Button>
-          <Button onClick={() => dispatch({ type: 'ADD_ITEM', name, id: empanada.id })}>+</Button>
+          <p className="m-right-2" >
+            {order.empanadas[empanada.id] || 0} {empanada.name}
+          </p>
+          <Button
+            onClick={() => dispatch({ type: 'REMOVE_ITEM', name, id: empanada.id })}
+          >
+            -
+          </Button>
+          <Button
+            onClick={() => dispatch({ type: 'ADD_ITEM', name, id: empanada.id })}
+          >
+            +
+          </Button>
         </div>
       ))}
     </div>

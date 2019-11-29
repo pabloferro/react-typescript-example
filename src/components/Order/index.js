@@ -8,7 +8,8 @@ class Order extends Component {
     starred: false
   };
 
-  handleToggleStarred = () => this.setState(prevState => ({ starred: !prevState.starred }));
+  handleToggleStarred = () =>
+    this.setState(prevState => ({ starred: !prevState.starred }));
 
   render() {
     const { starred } = this.state;

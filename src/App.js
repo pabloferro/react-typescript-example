@@ -15,7 +15,8 @@ import OrderDetailScreen from './components/OrderDetailScreen';
 import { reducer, DEFAULT_STATE } from './reducer';
 
 function App() {
-  const [state, dispatch] = usePersistentReducer(reducer, DEFAULT_STATE);
+  const [state, dispatch] =
+    usePersistentReducer(reducer, DEFAULT_STATE);
 
   return (
     <Router>
@@ -27,10 +28,16 @@ function App() {
           <div className="App-screen">
             <Switch>
               <Route path="/orders/:name">
-                <OrderDetailScreen state={state} dispatch={dispatch} />
+                <OrderDetailScreen
+                  state={state}
+                  dispatch={dispatch}
+                />
               </Route>
               <Route path="/">
-                <OrdersScreen state={state} dispatch={dispatch} />
+                <OrdersScreen
+                  state={state}
+                  dispatch={dispatch}
+                />
               </Route>
             </Switch>
           </div>

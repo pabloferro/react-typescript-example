@@ -8,7 +8,10 @@ function usePersistentReducer(reducer, defaultState) {
     return newState;
   }
 
-  return useReducer(persistentReducer, JSON.parse(localStorage.getItem('state')) || defaultState);
+  return useReducer(
+    persistentReducer,
+    JSON.parse(localStorage.getItem('state')) || defaultState
+  );
 }
 
 export default usePersistentReducer;

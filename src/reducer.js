@@ -24,7 +24,10 @@ export function reducer(state, action) {
     case 'ADD_ORDER':
       return {
         ...state,
-        orders: [...state.orders, { id: id++, name: action.name, empanadas: [] }]
+        orders: [
+          ...state.orders,
+          { id: id++, name: action.name, empanadas: [] }
+        ]
       };
     case 'ADD_ITEM':
       return {
